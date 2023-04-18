@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+  }
+  .gender-images {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gender-images img {
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.5; 
+    transition: opacity 0.3s ease; 
+  }
+
+  .gender-images img.selected {
+    opacity: 1; 
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Gender Selection</title>
+  </head>
+  <body>
+    <h1>Êtes-vous :</h1>
+    <div class="gender-images">
+      <img
+        id="male"
+        class="selected"
+        src="homme.jpg"
+        alt="Male"
+        onclick="selectGender('male')"
+      />
+      <img
+        id="female"
+        src="femme.jpg"
+        alt="Female"
+        onclick="selectGender('female')"
+      />
+    </div>
+    <script>
+      var selectedGender = "";
+
+      function selectGender(gender) {
+        selectedGender = gender;
+        var genderImages =
+          document.getElementsByClassName("gender-images")[0].children;
+        for (var i = 0; i < genderImages.length; i++) {
+          // remove 'selected' class from all images
+          genderImages[i].classList.remove("selected");
+        }
+        // add 'selected' class to selected image
+        document.getElementById(gender).classList.add("selected");
+      }
+    </script>
+  </body>
+</html>
